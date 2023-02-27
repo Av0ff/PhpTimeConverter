@@ -6,7 +6,7 @@ interface TimeToWordConvertInterface{
     public static function convert(int $hours, int $minutes) : string;
 }
 
-class Main implements TimeToWordConvertInterface
+class TimeToWordConvert implements TimeToWordConvertInterface
 {
 
     public static function convert(int $hours, int $minutes): string
@@ -20,12 +20,12 @@ class Main implements TimeToWordConvertInterface
 
         $res2 = $numberTransformer->toWords($minutes);
 
-        return $res1 . ' hours ' . $res2 . ' minutes.'; 
+        return $res1 . ' hours ' . $res2 . ' minutes.';
     }
 
 }
 
-$sa = Main::convert(7,20);
+$sa = TimeToWordConvert::convert(7,20);
 echo strftime($sa);
 readline();
 ?>
